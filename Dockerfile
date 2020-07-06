@@ -75,4 +75,7 @@ EXPOSE  8766 8767
 WORKDIR /raven
 
 COPY scripts/docker-entrypoint.sh /usr/local/bin/
+RUN chmod 777 /usr/local/bin/docker-entrypoint.sh \
+    && ln -s /usr/local/bin/docker-entrypoint.sh /
+
 ENTRYPOINT ["docker-entrypoint.sh"]

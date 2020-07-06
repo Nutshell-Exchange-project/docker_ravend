@@ -3,7 +3,7 @@ version: '3.6'
 services:
   raven:
     restart: on-failure
-    image: realnuts/docker_ravend:v1.4.2.0.0
+    image: realnuts/docker_ravend:0.0.4.2.0
     ports:
       - "8766:8766"
       - "8767:8767"
@@ -14,6 +14,7 @@ services:
        - "-printtoconsole"
        - "-regtest=0"
        - "-rest"
+       - "-txindex"
        - "-rpcallowip=0/32"
        - "-rpcallowip=172.17.0.0/16"
        - "-rpcpassword=test"
