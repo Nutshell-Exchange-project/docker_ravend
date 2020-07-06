@@ -1,0 +1,23 @@
+version: '3.6'
+
+services:
+  raven:
+    restart: on-failure
+    image: realnuts/docker_ravend:v1.4.2.0.0
+    ports:
+      - "8766:8766"
+      - "8767:8767"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/raven_data:/raven/data
+    command:
+       - "-printtoconsole"
+       - "-regtest=0"
+       - "-rest"
+       - "-rpcallowip=0/32"
+       - "-rpcallowip=172.17.0.0/16"
+       - "-rpcpassword=test"
+       - "-wallet=wallet1"
+       - "-rpcport=8766"
+       - "-rpcuser=foo"
+       - "-server"
