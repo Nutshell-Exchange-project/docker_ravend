@@ -3,7 +3,7 @@ version: '3.6'
 services:
   ravencoin:
     restart: always
-    image: realnuts/docker_ravend:4.2.1
+    image: realnuts/docker_ravend:4.2.1-1
     ports:
       - "8766:8766"
       - "8767:8767"
