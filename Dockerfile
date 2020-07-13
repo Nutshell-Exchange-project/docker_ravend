@@ -4,7 +4,7 @@ ENV GROUP_ID ${GROUP_ID:-1000}
 ENV RVN_DATA=/home/raven/.raven
 
 RUN groupadd -g ${GROUP_ID} raven \
-	&& useradd -u ${USER_ID} -g raven -s /bin/bash -m -d /ravn raven
+	&& useradd -u ${USER_ID} -g raven -s /bin/bash -m -d /raven raven
 
 RUN apt-get update -y
 
