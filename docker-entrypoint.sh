@@ -4,7 +4,7 @@ set -e
 if [[ $(echo "$1" | cut -c1) = "-" ]]; then
   echo "$0: assuming arguments for ravend"
 
-  set -- pivxd "$@"
+  set -- ravend "$@"
 fi
 
 if [[ $(echo "$1" | cut -c1) = "-" ]] || [[ "$1" = "ravend" ]]; then
